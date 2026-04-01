@@ -4,7 +4,7 @@
   'use strict';
 
   /* ---------- AGE GATE ---------- */
-  const ageGate = document.getElementById('age-gate');
+  var ageGate = document.getElementById('age-gate');
   if (ageGate) {
     if (localStorage.getItem('como_age_verified') === 'true') {
       ageGate.remove();
@@ -12,23 +12,19 @@
       ageGate.style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
-  }
-
-  window.ageAgree = function () {
-    localStorage.setItem('como_age_verified', 'true');
-    if (ageGate) {
+    ageGate.querySelector('.btn-agree')?.addEventListener('click', function () {
+      localStorage.setItem('como_age_verified', 'true');
       ageGate.style.opacity = '0';
       ageGate.style.transition = 'opacity 0.3s';
       setTimeout(function () {
         ageGate.remove();
         document.body.style.overflow = '';
       }, 300);
-    }
-  };
-
-  window.ageExit = function () {
-    window.location.href = 'https://www.google.com';
-  };
+    });
+    ageGate.querySelector('.btn-exit')?.addEventListener('click', function () {
+      window.location.href = 'https://www.google.com';
+    });
+  }
 
   /* ---------- MOBILE MENU ---------- */
   const mobileToggle = document.getElementById('mobile-toggle');
@@ -66,9 +62,22 @@
   });
 
   /* ---------- ADD TO CART (PLACEHOLDER) ---------- */
-  window.addToCart = function (name) {
-    showToast(name + ' added to cart — for research use only.');
-  };
+  document.querySelectorAll('.btn-add-cart[data-product]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      showToast(btn.dataset.product + ' added to cart — for research use only.');
+    });
+  });
+
+  /* ---------- QUANTITY BUTTONS (data-qty) ---------- */
+  document.querySelectorAll('[data-qty]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var input = btn.closest('.quantity-selector')?.querySelector('input');
+      if (!input) return;
+      var delta = parseInt(btn.dataset.qty);
+      var next = parseInt(input.value) + delta;
+      if (next >= 1) input.value = next;
+    });
+  });
 
   /* ---------- TOAST NOTIFICATION ---------- */
   var toastEl = document.getElementById('toast');

@@ -54,8 +54,8 @@
       </ul>
       <p>If you do not agree to these terms, please close this browser window.</p>
       <div class="age-gate-buttons">
-        <button class="btn-agree" onclick="ageAgree()">I Agree – Enter Site</button>
-        <button class="btn-exit" onclick="ageExit()">No, Exit</button>
+        <button class="btn-agree">I Agree – Enter Site</button>
+        <button class="btn-exit">No, Exit</button>
       </div>
     </div>
   </div>
@@ -165,13 +165,13 @@
         <div class="product-quantity">
           <label for="qty">Quantity:</label>
           <div class="qty-control">
-            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+            <button class="qty-btn" data-qty="-1">−</button>
             <input type="number" id="qty" value="1" min="1" max="20" readonly>
-            <button class="qty-btn" onclick="changeQty(1)">+</button>
+            <button class="qty-btn" data-qty="1">+</button>
           </div>
         </div>
 
-        <button class="btn-add-cart" onclick="addToCart('GHK-Cu 50mg', 36.99)">Add to Cart – $36.99</button>
+        <button class="btn-add-cart" data-product="GHK-Cu 50mg">Add to Cart – $36.99</button>
 
         <div class="product-trust">
           <div class="trust-item">✔ Third-Party Tested</div>
