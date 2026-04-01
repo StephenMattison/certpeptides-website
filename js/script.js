@@ -1,4 +1,4 @@
-/* ===== ComoPeptides — Main JavaScript ===== */
+/* ===== AssayPeptides — Main JavaScript ===== */
 
 (function () {
   'use strict';
