@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ComoPeptides – Columbia, MO Research Peptides</title>
+  <meta name="description"
+    content="Contact ComoPeptides for questions about research peptides, orders, COA requests, or bulk pricing. Based in Columbia, MO. Email support@comopeptides.com or use our contact form.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comopeptides.com/contact">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="age-gate" id="age-gate" style="display:none;" role="dialog" aria-modal="true"
+    aria-labelledby="age-gate-title">
+    <div class="age-gate-box">
+      <h1 id="age-gate-title">Must Be 18 or Older to Enter</h1>
+      <p>By clicking &ldquo;Enter,&rdquo; you confirm that:</p>
+      <ul>
+        <li>You are at least 18 years of age.</li>
+        <li>You will use any peptides purchased from this site for research purposes only.</li>
+        <li>You understand these peptides are not intended for human or animal consumption, nor for any other use not
+          permitted by law.</li>
+      </ul>
+      <p>If you do not agree to these terms, please close this browser window.</p>
+      <div class="age-gate-buttons"><button class="btn-agree" onclick="ageAgree()">I Agree – Enter Site</button><button
+          class="btn-exit" onclick="ageExit()">No, Exit</button></div>
+    </div>
+  </div>
+
+  <div class="announcement-bar">🔬 FREE Shipping on Orders Over $150 &nbsp;|&nbsp; All Peptides Include Certificate of
+    Analysis &nbsp;|&nbsp; For Research Use Only</div>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner"><a href="index.html" class="logo"
+        aria-label="ComoPeptides Home">Como<span>Peptides</span></a>
+      <div class="nav-links"><a href="shop.html">Shop</a><a href="collections.html">Collections</a><a
+          href="coa.html">Quality &amp; COA</a><a href="shipping.html">Shipping Info</a><a href="about.html">About
+          Us</a><a href="contact.html" class="active">Contact</a><a href="blog.html">Blog</a></div>
+      <div class="nav-actions">
+        <div class="nav-cart" role="button" aria-label="Shopping cart" tabindex="0"><svg width="24" height="24"
+            fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0" />
+          </svg><span class="cart-badge">0</span></div><button class="mobile-toggle" id="mobile-toggle"
+          aria-label="Toggle menu" aria-expanded="false"><svg width="24" height="24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu"><a href="shop.html">Shop</a><a href="collections.html">Collections</a><a
+        href="coa.html">Quality &amp; COA</a><a href="shipping.html">Shipping Info</a><a href="about.html">About
+        Us</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a></div>
+  </nav>
+
+  <section class="page-header">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact Us</span></div>
+    <h1>Contact ComoPeptides</h1>
+    <p>We're here to help with product questions, order inquiries, COA requests, and bulk pricing</p>
+  </section>
+
+  <div class="section">
+    <div class="grid-2" style="max-width:1000px;margin:0 auto;">
+      <!-- CONTACT FORM -->
+      <div>
+        <h2 class="section-title" style="font-size:1.5rem;">Send Us a Message</h2>
+        <p style="color:var(--gray-500);margin-bottom:2rem;">Fill out the form below and our team will respond within
+          one business day.</p>
+
+        <div class="form-success" id="form-success">
+          Your message has been sent successfully. We'll get back to you within one business day. Thank you!
+        </div>
+
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic...</option>
+              <option value="product">Product Question</option>
+              <option value="order">Order Inquiry</option>
+              <option value="coa">COA Request</option>
+              <option value="bulk">Bulk / Wholesale Pricing</option>
+              <option value="return">Returns &amp; Refunds</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:1rem;">
+            Send Message
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div>
+        <h2 class="section-title" style="font-size:1.5rem;">Get in Touch</h2>
+        <p style="color:var(--gray-500);margin-bottom:2rem;">Prefer to reach us directly? Use any of the methods below.
+        </p>
+
+        <div style="margin-bottom:2rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--gray-800);margin-bottom:0.5rem;">📧 Email</h3>
+          <p style="color:var(--gray-600);"><a href="mailto:support@comopeptides.com">support@comopeptides.com</a></p>
+          <p style="color:var(--gray-500);font-size:0.85rem;">We respond within one business day.</p>
+        </div>
+
+        <div style="margin-bottom:2rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--gray-800);margin-bottom:0.5rem;">📍 Address</h3>
+          <p style="color:var(--gray-600);">ComoPeptides<br>123 Research Blvd, Suite 200<br>Columbia, MO 65201</p>
+        </div>
+
+        <div style="margin-bottom:2rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--gray-800);margin-bottom:0.5rem;">🕐 Business Hours</h3>
+          <p style="color:var(--gray-600);">Monday – Friday: 9:00 AM – 5:00 PM CST<br>Saturday – Sunday: Closed</p>
+        </div>
+
+        <div
+          style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.5rem;">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--gray-800);margin-bottom:0.5rem;">Bulk &amp; Wholesale
+            Orders</h3>
+          <p style="color:var(--gray-600);font-size:0.9rem;line-height:1.7;">Research institutions and labs ordering in
+            volume may qualify for discounted pricing. Contact us with your requirements and we'll provide a custom
+            quote within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><a href="index.html" class="logo">Como<span>Peptides</span></a>
+        <p>Premium research peptides supplier based in Columbia, Missouri. All products are for laboratory and research
+          use only — not for human or animal consumption.</p>
+        <p style="font-size:0.8rem;">123 Research Blvd, Suite 200<br>Columbia, MO 65201</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="collections.html#glp1">GLP-1 Agonists</a></li>
+          <li><a href="collections.html#healing">Healing Peptides</a></li>
+          <li><a href="collections.html#growth">Growth Hormone</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="coa.html">Quality &amp; COA</a></li>
+          <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="disclaimer.html">Research Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ComoPeptides. All Rights Reserved. For research use only.</p>
+      <div class="payment-icons">
+        <span>VISA</span><span>MC</span><span>AMEX</span><span>DISCOVER</span><span>CRYPTO</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><svg width="20" height="20" fill="none"
+      stroke="currentColor" stroke-width="2">
+      <path d="M10 16V4M4 10l6-6 6 6" />
+    </svg></button>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
