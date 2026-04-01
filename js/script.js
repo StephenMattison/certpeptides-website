@@ -1,4 +1,4 @@
-/* ===== AssayPeptides — Main JavaScript ===== */
+/* ===== CertPeptides — Main JavaScript ===== */
 
 (function () {
   'use strict';
