@@ -169,4 +169,47 @@
     });
   }
 
+  /* ---------- ACCOUNT TABS ---------- */
+  document.querySelectorAll('.account-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.account-tab').forEach(function (t) { t.classList.remove('active'); });
+      document.querySelectorAll('.account-panel').forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      var panel = document.getElementById('panel-' + tab.dataset.accountTab);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  /* ---------- LOGIN FORM ---------- */
+  var loginForm = document.getElementById('login-form');
+  if (loginForm) {
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var success = document.getElementById('login-success');
+      if (success) {
+        loginForm.style.display = 'none';
+        success.classList.add('show');
+      }
+    });
+  }
+
+  /* ---------- REGISTER FORM ---------- */
+  var registerForm = document.getElementById('register-form');
+  if (registerForm) {
+    registerForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var pw = document.getElementById('reg-password').value;
+      var confirm = document.getElementById('reg-confirm').value;
+      if (pw !== confirm) {
+        showToast('Passwords do not match. Please try again.');
+        return;
+      }
+      var success = document.getElementById('register-success');
+      if (success) {
+        registerForm.style.display = 'none';
+        success.classList.add('show');
+      }
+    });
+  }
+
 })();

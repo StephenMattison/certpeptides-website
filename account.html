@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | Sign In or Register – CertPeptides</title>
+  <meta name="description"
+    content="Sign in to your CertPeptides account to view orders, track shipments, and manage your research peptide purchases. New customers can register for an account.">
+  <meta name="keywords"
+    content="CertPeptides account, sign in, register, peptide orders, order tracking, research peptides account">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://certpeptides.com/account">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- AGE GATE -->
+  <div class="age-gate" id="age-gate" style="display:none;" role="dialog" aria-modal="true"
+    aria-labelledby="age-gate-title">
+    <div class="age-gate-box">
+      <h1 id="age-gate-title">Must Be 18 or Older to Enter</h1>
+      <p>By clicking &ldquo;Enter,&rdquo; you confirm that:</p>
+      <ul>
+        <li>You are at least 18 years of age.</li>
+        <li>You will use any peptides purchased from this site for research purposes only.</li>
+        <li>You understand these peptides are not intended for human or animal consumption, nor for any other use not
+          permitted by law.</li>
+      </ul>
+      <p>If you do not agree to these terms, please close this browser window.</p>
+      <div class="age-gate-buttons">
+        <button class="btn-agree" onclick="ageAgree()">I Agree – Enter Site</button>
+        <button class="btn-exit" onclick="ageExit()">No, Exit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    🔬 FREE Shipping on Orders Over $150 &nbsp;|&nbsp; All Peptides Include Certificate of Analysis &nbsp;|&nbsp; For
+    Research Use Only
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo" aria-label="CertPeptides Home">Cert<span>Peptides</span></a>
+      <div class="nav-links">
+        <a href="shop.html">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="coa.html">Quality &amp; COA</a>
+        <a href="shipping.html">Shipping Info</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="nav-actions">
+        <a href="account.html" class="nav-account active" aria-label="My Account">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 3a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+        </a>
+        <div class="nav-cart" role="button" aria-label="Shopping cart" tabindex="0">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-badge">0</span>
+        </div>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="shop.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="coa.html">Quality &amp; COA</a>
+      <a href="shipping.html">Shipping Info</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="account.html">My Account</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>My Account</span>
+    </div>
+    <h1>My Account</h1>
+    <p>Sign in to manage your orders, track shipments, and access your research account</p>
+  </section>
+
+  <!-- ACCOUNT SECTION -->
+  <div class="section">
+    <div class="account-container">
+
+      <!-- Login / Register Tabs -->
+      <div class="account-tabs">
+        <button class="account-tab active" data-account-tab="login">Sign In</button>
+        <button class="account-tab" data-account-tab="register">Create Account</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div class="account-panel active" id="panel-login">
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" name="email" placeholder="your@email.com" required
+              autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="Enter your password" required
+              autocomplete="current-password">
+          </div>
+          <div class="form-row"
+            style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+            <label class="checkbox-label">
+              <input type="checkbox" name="remember"> Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Sign In</button>
+        </form>
+        <div class="form-success" id="login-success">
+          Welcome back! You have been signed in successfully. Redirecting to your dashboard...
+        </div>
+      </div>
+
+      <!-- REGISTER FORM -->
+      <div class="account-panel" id="panel-register">
+        <form id="register-form" novalidate>
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="reg-first">First Name</label>
+              <input type="text" id="reg-first" name="first_name" placeholder="First name" required
+                autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="reg-last">Last Name</label>
+              <input type="text" id="reg-last" name="last_name" placeholder="Last name" required
+                autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" name="password" placeholder="Create a password (min 8 characters)"
+              required minlength="8" autocomplete="new-password">
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm">Confirm Password</label>
+            <input type="password" id="reg-confirm" name="confirm_password" placeholder="Re-enter your password"
+              required minlength="8" autocomplete="new-password">
+          </div>
+          <div class="form-group">
+            <label for="reg-institution">Institution / Lab Name <span
+                style="color:var(--gray-400);font-weight:400;">(optional)</span></label>
+            <input type="text" id="reg-institution" name="institution" placeholder="University, company, or lab name"
+              autocomplete="organization">
+          </div>
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label class="checkbox-label">
+              <input type="checkbox" name="research_agreement" required>
+              I confirm all purchases will be for <strong>research purposes only</strong> and not for human or animal
+              consumption.
+            </label>
+          </div>
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label class="checkbox-label">
+              <input type="checkbox" name="terms_agreement" required>
+              I agree to the <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy
+                Policy</a>.
+            </label>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Create Account</button>
+        </form>
+        <div class="form-success" id="register-success">
+          Account created successfully! Please check your email to verify your account.
+        </div>
+      </div>
+
+      <!-- ACCOUNT BENEFITS -->
+      <div class="account-benefits">
+        <h3>Account Benefits</h3>
+        <ul>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+            </svg>
+            View and track your order history
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+            </svg>
+            Save shipping addresses for faster checkout
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+            </svg>
+            Access Certificates of Analysis for your purchases
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+            </svg>
+            Receive exclusive offers and early access to new products
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+            </svg>
+            Manage your research profile and preferences
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Cert<span>Peptides</span></a>
+        <p>Premium research peptides supplier based in Columbia, Missouri. All products are for laboratory and research
+          use only — not for human or animal consumption.</p>
+        <p style="font-size:0.8rem;">123 Research Blvd, Suite 200<br>Columbia, MO 65201</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="collections.html#glp1">GLP-1 Agonists</a></li>
+          <li><a href="collections.html#healing">Healing Peptides</a></li>
+          <li><a href="collections.html#growth">Growth Hormone</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="coa.html">Quality &amp; COA</a></li>
+          <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account &amp; Legal</h4>
+        <ul>
+          <li><a href="account.html">My Account</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="disclaimer.html">Research Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CertPeptides. All Rights Reserved. For research use only.</p>
+      <div class="payment-icons">
+        <span>VISA</span><span>MC</span><span>AMEX</span><span>DISCOVER</span><span>CRYPTO</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M10 16V4M4 10l6-6 6 6" />
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
