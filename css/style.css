@@ -213,7 +213,7 @@ a:hover { color: var(--primary); }
   font-size: 4rem; color: rgba(0,164,255,0.4);
 }
 .hero-video {
-  width: 100%; max-width: 336px;
+  width: 100%; max-width: 403px;
   border-radius: var(--radius-xl);
   display: block;
   object-fit: contain;
