@@ -104,6 +104,12 @@ a:hover { color: var(--primary); }
   font-size: 1.5rem; font-weight: 800; color: var(--primary);
   letter-spacing: -0.03em; display: flex; align-items: center; gap: 0.5rem;
 }
+.logo-video {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 .logo span { color: var(--accent); }
 .nav-links { display: flex; gap: 0.25rem; align-items: center; }
 .nav-links a {
