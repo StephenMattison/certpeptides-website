@@ -98,17 +98,19 @@ a:hover { color: var(--primary); }
 .navbar-inner {
   max-width: 1280px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 1.5rem; height: 72px;
+  padding: 0 1.5rem; height: 108px;
 }
 .logo {
   font-size: 1.5rem; font-weight: 800; color: var(--primary);
   letter-spacing: -0.03em; display: flex; align-items: center; gap: 0.5rem;
 }
 .logo-video {
-  height: 48px;
+  height: 96px;
   width: auto;
   display: block;
   object-fit: contain;
+  transform: scaleX(1.25);
+  transform-origin: left center;
 }
 .logo span { color: var(--accent); }
 .nav-links { display: flex; gap: 0.25rem; align-items: center; }
@@ -209,6 +211,12 @@ a:hover { color: var(--primary); }
   border-radius: var(--radius-xl); border: 2px solid rgba(0,164,255,0.2);
   display: flex; align-items: center; justify-content: center;
   font-size: 4rem; color: rgba(0,164,255,0.4);
+}
+.hero-video {
+  width: 100%; max-width: 480px;
+  border-radius: var(--radius-xl);
+  display: block;
+  object-fit: contain;
 }
 @media (max-width: 768px) {
   .hero { padding: 3rem 1.5rem; }
