@@ -98,19 +98,17 @@ a:hover { color: var(--primary); }
 .navbar-inner {
   max-width: 1280px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 1.5rem; height: 128px;
+  padding: 0 1.5rem; height: 56px;
 }
 .logo {
   font-size: 1.5rem; font-weight: 800; color: var(--primary);
   letter-spacing: -0.03em; display: flex; align-items: center; gap: 0.5rem;
 }
 .logo-video {
-  height: 115px;
+  height: 40px;
   width: auto;
   display: block;
   object-fit: contain;
-  transform: scaleX(1.25);
-  transform-origin: left center;
 }
 .logo span { color: var(--accent); }
 .nav-links { display: flex; gap: 0.25rem; align-items: center; }
