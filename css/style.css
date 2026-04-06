@@ -276,6 +276,14 @@ a:hover { color: var(--primary); }
   opacity: 0; transition: opacity 0.2s;
 }
 .product-card:hover .quick-view { opacity: 1; }
+.product-main-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  margin: 0 auto;
+}
 .quick-view span {
   background: var(--white); color: var(--primary);
   padding: 0.5rem 1.25rem; border-radius: var(--radius);
