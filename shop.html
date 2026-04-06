@@ -116,9 +116,11 @@
           <option value="blends">Peptide Blends</option>
         </select>
         <select id="sort-select" aria-label="Sort products">
-          <option value="default">Sort: Featured</option>
-          <option value="price-asc">Price: Low to High</option>
-          <option value="price-desc">Price: High to Low</option>
+          <option value="default">Sort: Default (A–Z)</option>
+          <option value="latest">Sort: Latest</option>
+          <option value="popularity">Sort: Popularity</option>
+          <option value="price-asc">Sort: Price: Low to High</option>
+          <option value="price-desc">Sort: Price: High to Low</option>
         </select>
       </div>
       <span class="result-count" id="result-count">37 products</span>
@@ -126,8 +128,77 @@
 
     <div class="products-grid">
 
+      <!-- 5-Amino-1MQ -->
+      <div class="product-card" data-category="metabolic" data-price="49.99" data-name="5-Amino-1MQ (5mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_5-amino-1-mq_5mg_300x300.jpeg"
+            alt="5-Amino-1MQ" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Metabolic</p>
+          <h3><a href="product-5-amino-1mq.html">5-Amino-1MQ (5mg)</a></h3>
+          <p class="product-desc">NNMT inhibitor studied for metabolic regulation and energy expenditure research.</p>
+          <p class="product-price"><span class="from">From </span>$49.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="5-Amino-1MQ">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Acetic Acid 0.6% -->
+      <div class="product-card" data-category="supplies" data-price="7.99" data-name="Acetic Acid 0.6% (3ml)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_acetic_acid_0.6_3ml_300x300.jpeg"
+            alt="Acetic Acid 0.6%" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Supplies</p>
+          <h3><a href="product-acetic-acid.html">Acetic Acid 0.6% (3ml)</a></h3>
+          <p class="product-desc">Sterile 0.6% acetic acid solution for specialized peptide reconstitution.</p>
+          <p class="product-price"><span class="from">From </span>$7.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="Acetic Acid 0.6%">Add to Cart</button>
+        </div>
+      </div>
+
+
+      <!-- AOD-9604 -->
+      <div class="product-card" data-category="metabolic" data-price="44.99" data-name="AOD-9604 (5mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_aod-9604_5mg_300x300.jpeg"
+            alt="AOD-9604" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Metabolic</p>
+          <h3><a href="product-aod-9604.html">AOD-9604 (5mg)</a></h3>
+          <p class="product-desc">Modified hGH fragment (177-191) studied for lipolysis and fat metabolism research.</p>
+          <p class="product-price"><span class="from">From </span>$44.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="AOD-9604">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Bacteriostatic Water -->
+      <div class="product-card" data-category="supplies" data-price="9.99" data-name="Bacteriostatic Water (10ml)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_bac_water_10ml_300x300.jpeg"
+            alt="Bacteriostatic Water" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Supplies</p>
+          <h3><a href="product-bacteriostatic-water.html">Bacteriostatic Water (10ml)</a></h3>
+          <p class="product-desc">Sterile diluent with 0.9% benzyl alcohol for peptide reconstitution.</p>
+          <p class="product-price"><span class="from">From </span>$9.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="Bacteriostatic Water">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- BPC-157 -->
-      <div class="product-card" data-category="healing" data-price="42.99">
+      <div class="product-card" data-category="healing" data-price="42.99" data-name="BPC-157 (5mg)">
         <span class="product-badge">Best Seller</span>
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_bpc-157_10mg_300x300.jpeg"
             alt="BPC-157" style="width:100%;height:100%;object-fit:cover;">
@@ -144,183 +215,8 @@
         </div>
       </div>
 
-      <!-- Tirzepatide -->
-      <div class="product-card" data-category="glp1" data-price="89.99">
-        <span class="product-badge">Popular</span>
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_tirzepatide_10mg_300x300.jpeg"
-            alt="Tirzepatide" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">GLP-1 Agonists</p>
-          <h3><a href="product-tirzepatide.html">Tirzepatide (TZ) 10mg</a></h3>
-          <p class="product-desc">Dual GIP/GLP-1 receptor agonist peptide for metabolic research applications.</p>
-          <p class="product-price"><span class="from">From </span>$89.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="Tirzepatide">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Semaglutide -->
-      <div class="product-card" data-category="glp1" data-price="74.99">
-        <div class="product-image">🧪<div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">GLP-1 Agonists</p>
-          <h3><a href="product-semaglutide.html">Semaglutide (5mg)</a></h3>
-          <p class="product-desc">GLP-1 receptor agonist for glucose metabolism and appetite regulation research.</p>
-          <p class="product-price"><span class="from">From </span>$74.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="Semaglutide">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Retatrutide -->
-      <div class="product-card" data-category="glp1" data-price="99.99">
-        <span class="product-badge">New</span>
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_retatrutide_5mg_300x300.jpeg"
-            alt="Retatrutide" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Triple Agonist</p>
-          <h3><a href="product-retatrutide.html">Retatrutide (RT) 10mg</a></h3>
-          <p class="product-desc">Triple hormone receptor agonist (GIP/GLP-1/Glucagon) for advanced metabolic studies.
-          </p>
-          <p class="product-price"><span class="from">From </span>$99.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="Retatrutide">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Sermorelin -->
-      <div class="product-card" data-category="growth" data-price="34.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_sermorelin_10mg_300x300.jpeg"
-            alt="Sermorelin" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Growth Hormone</p>
-          <h3><a href="product-sermorelin.html">Sermorelin (2mg)</a></h3>
-          <p class="product-desc">Growth hormone-releasing hormone analog for GH secretion research.</p>
-          <p class="product-price"><span class="from">From </span>$34.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="Sermorelin">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- PT-141 -->
-      <div class="product-card" data-category="melanocortin" data-price="39.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_pt-141_8mg_300x300.jpeg"
-            alt="PT-141" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Melanocortin</p>
-          <h3><a href="product-pt141.html">PT-141 (10mg)</a></h3>
-          <p class="product-desc">Melanocortin receptor agonist peptide for neuroendocrine pathway research.</p>
-          <p class="product-price"><span class="from">From </span>$39.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="PT-141">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- TB-500 -->
-      <div class="product-card" data-category="healing" data-price="44.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_tb-500_5mg_300x300.jpeg"
-            alt="TB-500" class="product-main-img">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Healing &amp; Recovery</p>
-          <h3><a href="product-tb500.html">TB-500 (5mg)</a></h3>
-          <p class="product-desc">Thymosin Beta-4 fragment for wound healing, inflammation, and tissue repair research.
-          </p>
-          <p class="product-price"><span class="from">From </span>$44.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="TB-500">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- CJC-1295 -->
-      <div class="product-card" data-category="growth" data-price="39.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_cjc_no-dac_10mg_300x300.jpeg"
-            alt="CJC-1295" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Growth Hormone</p>
-          <h3><a href="product-cjc1295.html">CJC-1295 DAC (2mg)</a></h3>
-          <p class="product-desc">Long-acting growth hormone-releasing hormone analog with Drug Affinity Complex.</p>
-          <p class="product-price"><span class="from">From </span>$39.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="CJC-1295">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Ipamorelin -->
-      <div class="product-card" data-category="growth" data-price="36.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_ipamorelin_5mg_300x300.jpeg"
-            alt="Ipamorelin" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Growth Hormone</p>
-          <h3><a href="product-ipamorelin.html">Ipamorelin (5mg)</a></h3>
-          <p class="product-desc">Selective GH secretagogue peptide for growth hormone pulse research with minimal side
-            effects.</p>
-          <p class="product-price"><span class="from">From </span>$36.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="Ipamorelin">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- GHK-Cu -->
-      <div class="product-card" data-category="anti-aging" data-price="49.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_ghk-cu_85mg_300x300.jpeg"
-            alt="GHK-Cu" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Anti-Aging</p>
-          <h3><a href="product-ghkcu.html">GHK-Cu (50mg)</a></h3>
-          <p class="product-desc">Copper peptide complex for skin remodeling, collagen synthesis, and anti-aging
-            research.</p>
-          <p class="product-price"><span class="from">From </span>$49.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="GHK-Cu">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Epitalon -->
-      <div class="product-card" data-category="anti-aging" data-price="54.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_epitalon_50mg_300x300.jpeg"
-            alt="Epitalon" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Anti-Aging</p>
-          <h3><a href="product-epitalon.html">Epitalon (10mg)</a></h3>
-          <p class="product-desc">Tetrapeptide for telomerase activation and cellular longevity research applications.
-          </p>
-          <p class="product-price"><span class="from">From </span>$54.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="Epitalon">Add to Cart</button>
-        </div>
-      </div>
-
       <!-- BPC-157 + TB-500 Blend -->
-      <div class="product-card" data-category="blends" data-price="79.99">
+      <div class="product-card" data-category="blends" data-price="79.99" data-name="BPC-157 + TB-500 Blend">
         <span class="product-badge">Bundle</span>
         <div class="product-image"><img
             src="images/Cert Peptide Images 300x300/cert_tb-500_bpc-157_blend_10mg_10mg_300x300.jpeg"
@@ -337,42 +233,9 @@
           <button class="btn-add-cart" data-product="BPC-157 + TB-500 Blend">Add to Cart</button>
         </div>
       </div>
-      <!-- 5-Amino-1MQ -->
-      <div class="product-card" data-category="metabolic" data-price="49.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_5-amino-1-mq_5mg_300x300.jpeg"
-            alt="5-Amino-1MQ" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Metabolic</p>
-          <h3><a href="product-5-amino-1mq.html">5-Amino-1MQ (5mg)</a></h3>
-          <p class="product-desc">NNMT inhibitor studied for metabolic regulation and energy expenditure research.</p>
-          <p class="product-price"><span class="from">From </span>$49.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="5-Amino-1MQ">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- AOD-9604 -->
-      <div class="product-card" data-category="metabolic" data-price="44.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_aod-9604_5mg_300x300.jpeg"
-            alt="AOD-9604" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Metabolic</p>
-          <h3><a href="product-aod-9604.html">AOD-9604 (5mg)</a></h3>
-          <p class="product-desc">Modified hGH fragment (177-191) studied for lipolysis and fat metabolism research.</p>
-          <p class="product-price"><span class="from">From </span>$44.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="AOD-9604">Add to Cart</button>
-        </div>
-      </div>
 
       <!-- Cagrilintide -->
-      <div class="product-card" data-category="glp1" data-price="89.99">
+      <div class="product-card" data-category="glp1" data-price="89.99" data-name="Cagrilintide (6mg)">
         <span class="product-badge">New</span>
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_cagrilintide_6mg_300x300.jpeg"
             alt="Cagrilintide" style="width:100%;height:100%;object-fit:cover;">
@@ -389,8 +252,26 @@
         </div>
       </div>
 
+      <!-- CJC-1295 -->
+      <div class="product-card" data-category="growth" data-price="39.99" data-name="CJC-1295 DAC (2mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_cjc_no-dac_10mg_300x300.jpeg"
+            alt="CJC-1295" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Growth Hormone</p>
+          <h3><a href="product-cjc1295.html">CJC-1295 DAC (2mg)</a></h3>
+          <p class="product-desc">Long-acting growth hormone-releasing hormone analog with Drug Affinity Complex.</p>
+          <p class="product-price"><span class="from">From </span>$39.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="CJC-1295">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- DSIP (Delta Sleep Inducing Peptide) -->
-      <div class="product-card" data-category="neuropeptides" data-price="39.99">
+      <div class="product-card" data-category="neuropeptides" data-price="39.99"
+        data-name="DSIP (Delta Sleep Inducing Peptide) (5mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_dsip_5mg_300x300.jpeg"
             alt="DSIP (Delta Sleep Inducing Peptide)" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -407,8 +288,44 @@
         </div>
       </div>
 
+      <!-- Epitalon -->
+      <div class="product-card" data-category="anti-aging" data-price="54.99" data-name="Epitalon (10mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_epitalon_50mg_300x300.jpeg"
+            alt="Epitalon" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Anti-Aging</p>
+          <h3><a href="product-epitalon.html">Epitalon (10mg)</a></h3>
+          <p class="product-desc">Tetrapeptide for telomerase activation and cellular longevity research applications.
+          </p>
+          <p class="product-price"><span class="from">From </span>$54.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="Epitalon">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- GHK-Cu -->
+      <div class="product-card" data-category="anti-aging" data-price="49.99" data-name="GHK-Cu (50mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_ghk-cu_85mg_300x300.jpeg"
+            alt="GHK-Cu" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Anti-Aging</p>
+          <h3><a href="product-ghkcu.html">GHK-Cu (50mg)</a></h3>
+          <p class="product-desc">Copper peptide complex for skin remodeling, collagen synthesis, and anti-aging
+            research.</p>
+          <p class="product-price"><span class="from">From </span>$49.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="GHK-Cu">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- GHRP-2 -->
-      <div class="product-card" data-category="growth" data-price="42.99">
+      <div class="product-card" data-category="growth" data-price="42.99" data-name="GHRP-2 (12mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_ghrp2_12mg_300x300.jpeg"
             alt="GHRP-2" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -425,7 +342,7 @@
       </div>
 
       <!-- Glow Blend -->
-      <div class="product-card" data-category="blends" data-price="69.99">
+      <div class="product-card" data-category="blends" data-price="69.99" data-name="Glow Blend (70mg)">
         <span class="product-badge">Bundle</span>
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_glow_70mg_300x300.jpeg"
             alt="Glow Blend" style="width:100%;height:100%;object-fit:cover;">
@@ -442,8 +359,26 @@
         </div>
       </div>
 
+      <!-- Glutathione -->
+      <div class="product-card" data-category="anti-aging" data-price="49.99" data-name="Glutathione (1000mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/certglutathione_1000mg_300x300.jpeg"
+            alt="Glutathione" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Anti-Aging</p>
+          <h3><a href="product-glutathione.html">Glutathione (1000mg)</a></h3>
+          <p class="product-desc">Master antioxidant tripeptide for detoxification and oxidative stress research.</p>
+          <p class="product-price"><span class="from">From </span>$49.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="Glutathione">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- Growth Hormone Optimization Stack -->
-      <div class="product-card" data-category="blends" data-price="99.99">
+      <div class="product-card" data-category="blends" data-price="99.99"
+        data-name="Growth Hormone Optimization Stack (Stack)">
         <span class="product-badge">Bundle</span>
         <div class="product-image"><img
             src="images/Cert Peptide Images 300x300/cert_growth_hormone_optimization_stack_300x300.jpeg"
@@ -462,7 +397,8 @@
       </div>
 
       <!-- HCG (Human Chorionic Gonadotropin) -->
-      <div class="product-card" data-category="hormones" data-price="79.99">
+      <div class="product-card" data-category="hormones" data-price="79.99"
+        data-name="HCG (Human Chorionic Gonadotropin) (10,000 IU)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_hcg_10000iu_300x300.jpeg"
             alt="HCG (Human Chorionic Gonadotropin)" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -479,7 +415,8 @@
       </div>
 
       <!-- HMG (Human Menopausal Gonadotropin) -->
-      <div class="product-card" data-category="hormones" data-price="59.99">
+      <div class="product-card" data-category="hormones" data-price="59.99"
+        data-name="HMG (Human Menopausal Gonadotropin) (75 IU)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_hmg_75iu_300x300.jpeg"
             alt="HMG (Human Menopausal Gonadotropin)" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -496,7 +433,7 @@
       </div>
 
       <!-- IGF-1 LR3 -->
-      <div class="product-card" data-category="growth" data-price="89.99">
+      <div class="product-card" data-category="growth" data-price="89.99" data-name="IGF-1 LR3 (1mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_igf1-lr3_1mg_300x300.jpeg"
             alt="IGF-1 LR3" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -512,8 +449,26 @@
         </div>
       </div>
 
+      <!-- Ipamorelin -->
+      <div class="product-card" data-category="growth" data-price="36.99" data-name="Ipamorelin (5mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_ipamorelin_5mg_300x300.jpeg"
+            alt="Ipamorelin" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Growth Hormone</p>
+          <h3><a href="product-ipamorelin.html">Ipamorelin (5mg)</a></h3>
+          <p class="product-desc">Selective GH secretagogue peptide for growth hormone pulse research with minimal side
+            effects.</p>
+          <p class="product-price"><span class="from">From </span>$36.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="Ipamorelin">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- Klow Blend -->
-      <div class="product-card" data-category="blends" data-price="69.99">
+      <div class="product-card" data-category="blends" data-price="69.99" data-name="Klow Blend (80mg)">
         <span class="product-badge">Bundle</span>
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_klow_80mg_300x300.jpeg"
             alt="Klow Blend" style="width:100%;height:100%;object-fit:cover;">
@@ -531,7 +486,7 @@
       </div>
 
       <!-- KPV -->
-      <div class="product-card" data-category="anti-aging" data-price="44.99">
+      <div class="product-card" data-category="anti-aging" data-price="44.99" data-name="KPV (13mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_kpv_13mg_300x300.jpeg" alt="KPV"
             style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -548,7 +503,7 @@
       </div>
 
       <!-- L-Carnitine -->
-      <div class="product-card" data-category="metabolic" data-price="34.99">
+      <div class="product-card" data-category="metabolic" data-price="34.99" data-name="L-Carnitine (50ml)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_l_carnitine_50ml_300x300.jpeg"
             alt="L-Carnitine" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -565,7 +520,8 @@
       </div>
 
       <!-- Melanotan-1 (Afamelanotide) -->
-      <div class="product-card" data-category="melanocortin" data-price="44.99">
+      <div class="product-card" data-category="melanocortin" data-price="44.99"
+        data-name="Melanotan-1 (Afamelanotide) (10mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_melanotan-1_10mg_300x300.jpeg"
             alt="Melanotan-1 (Afamelanotide)" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -582,7 +538,7 @@
       </div>
 
       <!-- Melanotan-2 -->
-      <div class="product-card" data-category="melanocortin" data-price="39.99">
+      <div class="product-card" data-category="melanocortin" data-price="39.99" data-name="Melanotan-2 (7mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_melanotan-2_7mg_300x300.jpeg"
             alt="Melanotan-2" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -599,7 +555,7 @@
       </div>
 
       <!-- MOTS-c -->
-      <div class="product-card" data-category="metabolic" data-price="59.99">
+      <div class="product-card" data-category="metabolic" data-price="59.99" data-name="MOTS-c (10mg)">
         <span class="product-badge">New</span>
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_mots-c_10mg_300x300.jpeg"
             alt="MOTS-c" style="width:100%;height:100%;object-fit:cover;">
@@ -618,7 +574,7 @@
       </div>
 
       <!-- NAD+ -->
-      <div class="product-card" data-category="anti-aging" data-price="79.99">
+      <div class="product-card" data-category="anti-aging" data-price="79.99" data-name="NAD+ (500mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_nad+_500mg_300x300.jpeg" alt="NAD+"
             style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -634,8 +590,44 @@
         </div>
       </div>
 
+      <!-- PT-141 -->
+      <div class="product-card" data-category="melanocortin" data-price="39.99" data-name="PT-141 (10mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_pt-141_8mg_300x300.jpeg"
+            alt="PT-141" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Melanocortin</p>
+          <h3><a href="product-pt141.html">PT-141 (10mg)</a></h3>
+          <p class="product-desc">Melanocortin receptor agonist peptide for neuroendocrine pathway research.</p>
+          <p class="product-price"><span class="from">From </span>$39.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="PT-141">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Retatrutide -->
+      <div class="product-card" data-category="glp1" data-price="99.99" data-name="Retatrutide (RT) 10mg">
+        <span class="product-badge">New</span>
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_retatrutide_5mg_300x300.jpeg"
+            alt="Retatrutide" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Triple Agonist</p>
+          <h3><a href="product-retatrutide.html">Retatrutide (RT) 10mg</a></h3>
+          <p class="product-desc">Triple hormone receptor agonist (GIP/GLP-1/Glucagon) for advanced metabolic studies.
+          </p>
+          <p class="product-price"><span class="from">From </span>$99.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="Retatrutide">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- Selank -->
-      <div class="product-card" data-category="neuropeptides" data-price="44.99">
+      <div class="product-card" data-category="neuropeptides" data-price="44.99" data-name="Selank (10mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_selank_10mg_300x300.jpeg"
             alt="Selank" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -651,8 +643,23 @@
         </div>
       </div>
 
+      <!-- Semaglutide -->
+      <div class="product-card" data-category="glp1" data-price="74.99" data-name="Semaglutide (5mg)">
+        <div class="product-image">🧪<div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">GLP-1 Agonists</p>
+          <h3><a href="product-semaglutide.html">Semaglutide (5mg)</a></h3>
+          <p class="product-desc">GLP-1 receptor agonist for glucose metabolism and appetite regulation research.</p>
+          <p class="product-price"><span class="from">From </span>$74.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="Semaglutide">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- Semax -->
-      <div class="product-card" data-category="neuropeptides" data-price="44.99">
+      <div class="product-card" data-category="neuropeptides" data-price="44.99" data-name="Semax (10mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_semax_10mg_300x300.jpeg"
             alt="Semax" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -668,8 +675,25 @@
         </div>
       </div>
 
+      <!-- Sermorelin -->
+      <div class="product-card" data-category="growth" data-price="34.99" data-name="Sermorelin (2mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_sermorelin_10mg_300x300.jpeg"
+            alt="Sermorelin" style="width:100%;height:100%;object-fit:cover;">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Growth Hormone</p>
+          <h3><a href="product-sermorelin.html">Sermorelin (2mg)</a></h3>
+          <p class="product-desc">Growth hormone-releasing hormone analog for GH secretion research.</p>
+          <p class="product-price"><span class="from">From </span>$34.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="Sermorelin">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- SS-31 (Elamipretide) -->
-      <div class="product-card" data-category="anti-aging" data-price="54.99">
+      <div class="product-card" data-category="anti-aging" data-price="54.99" data-name="SS-31 (Elamipretide) (5mg)">
         <span class="product-badge">New</span>
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_ss-31_5mg_300x300.jpeg"
             alt="SS-31 (Elamipretide)" style="width:100%;height:100%;object-fit:cover;">
@@ -687,8 +711,26 @@
         </div>
       </div>
 
+      <!-- TB-500 -->
+      <div class="product-card" data-category="healing" data-price="44.99" data-name="TB-500 (5mg)">
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_tb-500_5mg_300x300.jpeg"
+            alt="TB-500" class="product-main-img">
+          <div class="quick-view"><span>Quick View</span></div>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Healing &amp; Recovery</p>
+          <h3><a href="product-tb500.html">TB-500 (5mg)</a></h3>
+          <p class="product-desc">Thymosin Beta-4 fragment for wound healing, inflammation, and tissue repair research.
+          </p>
+          <p class="product-price"><span class="from">From </span>$44.99</p>
+        </div>
+        <div class="product-actions">
+          <button class="btn-add-cart" data-product="TB-500">Add to Cart</button>
+        </div>
+      </div>
+
       <!-- Tesamorelin -->
-      <div class="product-card" data-category="growth" data-price="69.99">
+      <div class="product-card" data-category="growth" data-price="69.99" data-name="Tesamorelin (10mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_tesamorelin_10mg_300x300.jpeg"
             alt="Tesamorelin" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -705,7 +747,7 @@
       </div>
 
       <!-- Thymosin Alpha-1 -->
-      <div class="product-card" data-category="anti-aging" data-price="54.99">
+      <div class="product-card" data-category="anti-aging" data-price="54.99" data-name="Thymosin Alpha-1 (10mg)">
         <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_thymosin_Alpha-1_10mg_300x300.jpeg"
             alt="Thymosin Alpha-1" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
@@ -721,54 +763,21 @@
         </div>
       </div>
 
-      <!-- Glutathione -->
-      <div class="product-card" data-category="anti-aging" data-price="49.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/certglutathione_1000mg_300x300.jpeg"
-            alt="Glutathione" style="width:100%;height:100%;object-fit:cover;">
+      <!-- Tirzepatide -->
+      <div class="product-card" data-category="glp1" data-price="89.99" data-name="Tirzepatide (TZ) 10mg">
+        <span class="product-badge">Popular</span>
+        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_tirzepatide_10mg_300x300.jpeg"
+            alt="Tirzepatide" style="width:100%;height:100%;object-fit:cover;">
           <div class="quick-view"><span>Quick View</span></div>
         </div>
         <div class="product-info">
-          <p class="product-cat">Anti-Aging</p>
-          <h3><a href="product-glutathione.html">Glutathione (1000mg)</a></h3>
-          <p class="product-desc">Master antioxidant tripeptide for detoxification and oxidative stress research.</p>
-          <p class="product-price"><span class="from">From </span>$49.99</p>
+          <p class="product-cat">GLP-1 Agonists</p>
+          <h3><a href="product-tirzepatide.html">Tirzepatide (TZ) 10mg</a></h3>
+          <p class="product-desc">Dual GIP/GLP-1 receptor agonist peptide for metabolic research applications.</p>
+          <p class="product-price"><span class="from">From </span>$89.99</p>
         </div>
         <div class="product-actions">
-          <button class="btn-add-cart" data-product="Glutathione">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Bacteriostatic Water -->
-      <div class="product-card" data-category="supplies" data-price="9.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_bac_water_10ml_300x300.jpeg"
-            alt="Bacteriostatic Water" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Supplies</p>
-          <h3><a href="product-bacteriostatic-water.html">Bacteriostatic Water (10ml)</a></h3>
-          <p class="product-desc">Sterile diluent with 0.9% benzyl alcohol for peptide reconstitution.</p>
-          <p class="product-price"><span class="from">From </span>$9.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="Bacteriostatic Water">Add to Cart</button>
-        </div>
-      </div>
-
-      <!-- Acetic Acid 0.6% -->
-      <div class="product-card" data-category="supplies" data-price="7.99">
-        <div class="product-image"><img src="images/Cert Peptide Images 300x300/cert_acetic_acid_0.6_3ml_300x300.jpeg"
-            alt="Acetic Acid 0.6%" style="width:100%;height:100%;object-fit:cover;">
-          <div class="quick-view"><span>Quick View</span></div>
-        </div>
-        <div class="product-info">
-          <p class="product-cat">Supplies</p>
-          <h3><a href="product-acetic-acid.html">Acetic Acid 0.6% (3ml)</a></h3>
-          <p class="product-desc">Sterile 0.6% acetic acid solution for specialized peptide reconstitution.</p>
-          <p class="product-price"><span class="from">From </span>$7.99</p>
-        </div>
-        <div class="product-actions">
-          <button class="btn-add-cart" data-product="Acetic Acid 0.6%">Add to Cart</button>
+          <button class="btn-add-cart" data-product="Tirzepatide">Add to Cart</button>
         </div>
       </div>
 

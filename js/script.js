@@ -143,15 +143,108 @@
     });
   }
   if (sortSelect) {
+    /* Store original DOM order (alphabetical) so "Default" can restore it */
+    var grid = document.querySelector('.products-grid');
+    var originalOrder = grid ? Array.from(grid.querySelectorAll('.product-card')) : [];
+
+    /* Popularity scores – higher = more popular */
+    var popularityMap = {
+      'BPC-157 (5mg)': 100,
+      'Tirzepatide (TZ) 10mg': 95,
+      'Semaglutide (5mg)': 93,
+      'Retatrutide (RT) 10mg': 90,
+      'Sermorelin (2mg)': 88,
+      'TB-500 (5mg)': 86,
+      'Ipamorelin (5mg)': 85,
+      'CJC-1295 DAC (2mg)': 84,
+      'BPC-157 + TB-500 Blend': 83,
+      'PT-141 (10mg)': 80,
+      'GHK-Cu (50mg)': 78,
+      'Epitalon (10mg)': 76,
+      'NAD+ (500mg)': 74,
+      'Tesamorelin (10mg)': 72,
+      'MOTS-c (10mg)': 70,
+      'AOD-9604 (5mg)': 68,
+      'SS-31 (Elamipretide) (5mg)': 66,
+      'Thymosin Alpha-1 (10mg)': 64,
+      'Glutathione (1000mg)': 62,
+      'KPV (13mg)': 60,
+      'Selank (10mg)': 58,
+      'Semax (10mg)': 56,
+      'IGF-1 LR3 (1mg)': 55,
+      'GHRP-2 (12mg)': 54,
+      'Melanotan-2 (7mg)': 52,
+      'Melanotan-1 (Afamelanotide) (10mg)': 50,
+      'Cagrilintide (6mg)': 48,
+      'DSIP (Delta Sleep Inducing Peptide) (5mg)': 46,
+      'Growth Hormone Optimization Stack (Stack)': 44,
+      'Glow Blend (70mg)': 42,
+      'Klow Blend (80mg)': 40,
+      'L-Carnitine (50ml)': 38,
+      '5-Amino-1MQ (5mg)': 36,
+      'HCG (Human Chorionic Gonadotropin) (10,000 IU)': 34,
+      'HMG (Human Menopausal Gonadotropin) (75 IU)': 32,
+      'Bacteriostatic Water (10ml)': 20,
+      'Acetic Acid 0.6% (3ml)': 18
+    };
+
+    /* Latest additions – higher = newer */
+    var latestnessMap = {
+      'Cagrilintide (6mg)': 100,
+      'Retatrutide (RT) 10mg': 99,
+      'SS-31 (Elamipretide) (5mg)': 98,
+      'MOTS-c (10mg)': 97,
+      '5-Amino-1MQ (5mg)': 96,
+      'Klow Blend (80mg)': 95,
+      'Glow Blend (70mg)': 94,
+      'Growth Hormone Optimization Stack (Stack)': 93,
+      'NAD+ (500mg)': 92,
+      'KPV (13mg)': 91,
+      'Thymosin Alpha-1 (10mg)': 90,
+      'IGF-1 LR3 (1mg)': 89,
+      'L-Carnitine (50ml)': 88,
+      'DSIP (Delta Sleep Inducing Peptide) (5mg)': 87,
+      'Selank (10mg)': 86,
+      'Semax (10mg)': 85,
+      'Melanotan-1 (Afamelanotide) (10mg)': 84,
+      'Melanotan-2 (7mg)': 83,
+      'AOD-9604 (5mg)': 82,
+      'GHRP-2 (12mg)': 81,
+      'HCG (Human Chorionic Gonadotropin) (10,000 IU)': 80,
+      'HMG (Human Menopausal Gonadotropin) (75 IU)': 79,
+      'Glutathione (1000mg)': 78,
+      'Tesamorelin (10mg)': 77,
+      'Acetic Acid 0.6% (3ml)': 76,
+      'Bacteriostatic Water (10ml)': 75
+    };
+
     sortSelect.addEventListener('change', function () {
-      var grid = document.querySelector('.products-grid');
       if (!grid) return;
       var cards = Array.from(grid.querySelectorAll('.product-card'));
+      var mode = sortSelect.value;
+
+      if (mode === 'default') {
+        /* Restore alphabetical DOM order */
+        originalOrder.forEach(function (c) { grid.appendChild(c); });
+        return;
+      }
+
       cards.sort(function (a, b) {
-        var pa = parseFloat(a.dataset.price) || 0;
-        var pb = parseFloat(b.dataset.price) || 0;
-        if (sortSelect.value === 'price-asc') return pa - pb;
-        if (sortSelect.value === 'price-desc') return pb - pa;
+        var nameA = (a.dataset.name || '').trim();
+        var nameB = (b.dataset.name || '').trim();
+
+        if (mode === 'price-asc') {
+          return (parseFloat(a.dataset.price) || 0) - (parseFloat(b.dataset.price) || 0);
+        }
+        if (mode === 'price-desc') {
+          return (parseFloat(b.dataset.price) || 0) - (parseFloat(a.dataset.price) || 0);
+        }
+        if (mode === 'popularity') {
+          return (popularityMap[nameB] || 0) - (popularityMap[nameA] || 0);
+        }
+        if (mode === 'latest') {
+          return (latestnessMap[nameB] || 0) - (latestnessMap[nameA] || 0);
+        }
         return 0;
       });
       cards.forEach(function (c) { grid.appendChild(c); });
